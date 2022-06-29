@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { HttpService } from './http.service';
 
@@ -7,7 +7,7 @@ import { HttpService } from './http.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit, DoCheck {
+export class AppComponent implements OnInit {
   name = 'Angular ';
   infos = [];
   lat = 57.0;
@@ -16,10 +16,6 @@ export class AppComponent implements OnInit, DoCheck {
   constructor(private ht: HttpService) {}
   ngOnInit() {
     this.getWeather(this.lat, this.lon);
-  }
-
-  ngDoCheck() {
-    
   }
 
   getWeather(lat, lon) {
