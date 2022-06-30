@@ -1,11 +1,12 @@
 import { formatDate } from '@angular/common';
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, OnInit, DoCheck, ViewEncapsulation } from '@angular/core';
 import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css'],
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class ContentComponent implements OnInit, DoCheck {
   updateDate: any;
@@ -35,7 +36,7 @@ export class ContentComponent implements OnInit, DoCheck {
 
   filter() {
     this.hotDays = this.app.infos['daily'].filter((day) => {
-      return day['temp']['day'] > 28;
+      return day['temp']['day'] > 25;
     });
     this.hotDays.forEach((day) => {
       this.hotDaysString +=

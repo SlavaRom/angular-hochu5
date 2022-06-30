@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { HttpService } from './http.service';
 
@@ -6,15 +6,18 @@ import { HttpService } from './http.service';
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit {
   name = 'Angular ';
   infos = [];
-  lat = 57.0;
-  lon = 23.05;
+  lat: any;
+  lon: any;
 
   constructor(private ht: HttpService) {}
   ngOnInit() {
+    this.lat = +localStorage.getItem('lat');
+    this.lon = +localStorage.getItem('lon');
     this.getWeather(this.lat, this.lon);
   }
 
@@ -26,7 +29,7 @@ export class AppComponent implements OnInit {
         console.log('getWeather', this.infos);
       },
       (error) =>
-        console.warn(
+        alert(
           'exception in request to Api: ' +
             error.status +
             ' ' +

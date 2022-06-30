@@ -11,7 +11,7 @@ export class HttpService {
         lat.toString() +
         '&lon=' +
         lon.toString() +
-        '&units=metric&lang=ru&appid=2327d2beed6095613a55fc33189499c7'
+        '&units=metric&lang=ru&appid=6e730882c329cb4d2055fdb40f9b40f8'
     );
   }
 }

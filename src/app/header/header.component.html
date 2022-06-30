@@ -1,11 +1,11 @@
-<div class="logo">
-  <img src="{{ logoUrl }}" />
-  <h1>{{ nameApp }}</h1>
-</div>
-<div>
-  <h3>Your location coordinates</h3>
+<div class="header">
+  <div class="logo">
+    <img src="{{ logoUrl }}" />
+    <h1>{{ nameApp }}</h1>
+  </div>
+  <h2>Your location coordinates</h2>
   <input type="number" maxlength="9" [(ngModel)]="lat" />
   <input type="number" maxlength="9" [(ngModel)]="lon" />
-  <pre>lat = {{ lat }},  lon = {{ lon }}</pre>
+  <p>lat = {{ lat }}, lon = {{ lon }}</p>
   <button type="button" (click)="changeCord(lat, lon)">Update</button>
 </div>

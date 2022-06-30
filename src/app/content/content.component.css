@@ -1,0 +1,11 @@
+.content {
+  border: 2px solid yellow;
+  background-color: aqua;
+  padding: 0 2%;
+  padding-bottom: 2%;
+
+}
+.content button {
+  display: flex;
+  margin: auto;
+}

@@ -1,0 +1,33 @@
+.hourly {
+  padding: 0 2%;
+}
+.blocks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: auto;
+  background-color: yellow;
+  padding: 1rem;
+}
+.block {
+  /* height: 5rem; */
+  /* width: 5rem; */
+  min-width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid black;
+  margin-right: 1rem;
+  background-color: white;
+  padding: 0.5rem;
+  padding-bottom: 2%;
+}
+.block p {
+  font-size: 24px;
+  margin: 0;
+}
+.block p:first-child {
+  text-align: center;
+}

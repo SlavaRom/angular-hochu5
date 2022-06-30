@@ -1,3 +1,15 @@
 p {
   font-family: Lato;
+  font-size: 24px;
+}
+h1 {
+  color: rgb(43, 5, 211);
+}
+h2 {
+  color: rgb(43, 5, 211);
+}
+.main {
+  border: 2px solid green;
+  padding: 0 2%;
+  padding-bottom: 2%;
 }

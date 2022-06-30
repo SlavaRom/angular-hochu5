@@ -1,10 +1,6 @@
 p {
   font-family: Lato;
-}
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding-top: 3rem;
+  font-size: 16px;
 }
 .logo {
   display: flex;
@@ -18,4 +14,10 @@ p {
 }
 .logo h1 {
   margin: 0;
+}
+.header {
+  border: 2px solid red;
+  padding: 0 2%;
+  padding-bottom: 2%;
+
 }

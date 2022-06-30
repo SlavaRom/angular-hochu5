@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
+  encapsulation: ViewEncapsulation.Emulated,
 })
 export class HeaderComponent implements OnInit {
   nameApp = 'Weather';
@@ -26,6 +27,6 @@ export class HeaderComponent implements OnInit {
     this.app.lon = this.lon;
     localStorage.setItem('lat', this.lat.toString());
     localStorage.setItem('lon', this.lon.toString());
-    this.app.getWeather(this.lat, this.lon)
+    this.app.getWeather(this.lat, this.lon);
   }
 }

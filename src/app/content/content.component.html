@@ -1,5 +1,9 @@
-<p>Update at {{ updateDate }}</p>
-<p>Temp: {{ currentTemp }}</p>
-<p>Feels like: {{ currentFeelsLike }}</p>
-<p>Hum: {{ currentHum }}</p>
-<button type="button" (click)="filter()">Days with temp > 20</button>
+<div class="content">
+  <h2>Your weather</h2>
+  <p>Update at {{ updateDate }}</p>
+  <p>Temp: {{ currentTemp }}</p>
+  <p>Feels like: {{ currentFeelsLike }}</p>
+  <p>Hum: {{ currentHum }}</p>
+  <app-hourly-weather></app-hourly-weather>
+  <button type="button" (click)="filter()">Days with temp > 25</button>
+</div>

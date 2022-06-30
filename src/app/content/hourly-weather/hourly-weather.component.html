@@ -1,0 +1,9 @@
+<div class="hourly">
+  <div class="blocks">
+    <div class="block" *ngFor="let item of items">
+      <p>{{ item.time }}</p>
+      <p>Temp: {{ item.temp }}</p>
+      <p>Hum: {{ item.hum }}</p>
+    </div>
+  </div>
+</div>
