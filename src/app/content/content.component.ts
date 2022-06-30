@@ -35,7 +35,7 @@ export class ContentComponent implements OnInit, DoCheck {
   }
 
   filter() {
-    this.hotDays = this.app.infos['daily'].filter((day) => {
+    this.hotDays = this.app.infos['hourly'].filter((day) => {
       return day['temp']['day'] > 25;
     });
     this.hotDays.forEach((day) => {
