@@ -17,8 +17,8 @@ export class HeaderComponent implements OnInit {
   constructor(private app: AppComponent) {}
 
   ngOnInit() {
-    this.lat = +localStorage.getItem('lat');
-    this.lon = +localStorage.getItem('lon');
+    this.lat = this.app.lat;
+    this.lon = this.app.lon;
   }
 
   changeCord(lat, lon) {

@@ -19,5 +19,7 @@ p {
   border: 2px solid red;
   padding: 0 2%;
   padding-bottom: 2%;
-
+}
+button {
+  border-radius: 0.5rem;
 }

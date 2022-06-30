@@ -13,3 +13,6 @@ h2 {
   padding: 0 2%;
   padding-bottom: 2%;
 }
+.main button {
+  background-color: rgb(250, 160, 227);
+}
