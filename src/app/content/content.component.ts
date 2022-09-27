@@ -9,7 +9,6 @@ import { AppComponent } from '../app.component';
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class ContentComponent implements OnInit, DoCheck {
-  updateDate: any;
   currentTemp: any;
   currentFeelsLike: any;
   currentHum: any;
@@ -23,15 +22,9 @@ export class ContentComponent implements OnInit, DoCheck {
   }
 
   ngDoCheck() {
-    this.updateDate = formatDate(
-      1000 * this.app.infos['current']['dt'],
-      'short',
-      'En-en'
-    );
-    this.currentTemp = this.app.infos['current']['temp'];
-    this.currentFeelsLike = this.app.infos['current']['feels_like'];
-    this.currentHum = this.app.infos['current']['humidity'];
-    console.log(this.updateDate);
+    this.currentTemp = this.app.infos['dataseries'][0]['temp2m'];
+    this.currentFeelsLike = this.app.infos['dataseries'][0]['msl_pressure'];
+    this.currentHum = this.app.infos['dataseries'][0]['rh2m'];
   }
 
   filter() {

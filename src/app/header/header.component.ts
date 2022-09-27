@@ -9,8 +9,6 @@ import { AppComponent } from '../app.component';
 })
 export class HeaderComponent implements OnInit {
   nameApp = 'Weather';
-  logoUrl =
-    'https://st.depositphotos.com/1291894/1952/i/450/depositphotos_19521727-stock-photo-umbrella.jpg';
 
   lat: number;
   lon: number;

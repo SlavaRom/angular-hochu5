@@ -7,11 +7,11 @@ export class HttpService {
 
   getData(lat, lon) {
     return this.client.get(
-      'https://api.openweathermap.org/data/2.5/onecall?lat=' +
+      'http://www.7timer.info/bin/meteo.php?lat=' +
         lat.toString() +
         '&lon=' +
         lon.toString() +
-        '&units=metric&lang=ru&appid=6e730882c329cb4d2055fdb40f9b40f8'
+        'product=meteo&output=json&tzshift=0'
     );
   }
 }
