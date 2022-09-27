@@ -7,11 +7,11 @@ export class HttpService {
 
   getData(lat, lon) {
     return this.client.get(
-      'http://www.7timer.info/bin/meteo.php?lat=' +
+      'https://www.7timer.info/bin/meteo.php?lat=' +
         lat.toString() +
         '&lon=' +
         lon.toString() +
-        'product=meteo&output=json&tzshift=0'
+        '&ac=0&lang=en&unit=metric&output=json&tzshift=0'
     );
   }
 }
