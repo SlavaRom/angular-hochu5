@@ -12,12 +12,12 @@ export class HourlyWeatherComponent implements OnInit {
   constructor(private app: AppComponent) {}
 
   ngOnInit() {
-    this.app.infos['hourly'].forEach((hour) =>
+    this.app.infos['dataseries'].forEach((hour) =>
       this.items.push(
         new Hourly(
-          formatDate(1000 * hour['dt'], 'shortTime', 'En-en'),
-          hour['temp'],
-          hour['humidity']
+          formatDate(Date.now + hour['timepoint'], 'shortTime', 'En-en'),
+          hour['temp2m'],
+          hour['rh2m']
         )
       )
     );

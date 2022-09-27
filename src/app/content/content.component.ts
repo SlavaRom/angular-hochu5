@@ -10,7 +10,7 @@ import { AppComponent } from '../app.component';
 })
 export class ContentComponent implements OnInit, DoCheck {
   currentTemp: any;
-  currentFeelsLike: any;
+  pressure: any;
   currentHum: any;
   hotDays: any;
   hotDaysString = '';
@@ -23,18 +23,14 @@ export class ContentComponent implements OnInit, DoCheck {
 
   ngDoCheck() {
     this.currentTemp = this.app.infos['dataseries'][0]['temp2m'];
-    this.currentFeelsLike = this.app.infos['dataseries'][0]['msl_pressure'];
+    this.pressure = this.app.infos['dataseries'][0]['msl_pressure'];
     this.currentHum = this.app.infos['dataseries'][0]['rh2m'];
-  }
-
-  filter() {
-    this.hotDays = this.app.infos['hourly'].filter((day) => {
-      return day['temp']['day'] > 25;
-    });
-    this.hotDays.forEach((day) => {
-      this.hotDaysString +=
-        formatDate(1000 * day['dt'], 'short', 'En-en') + ' ; ';
-    });
-    alert(this.hotDaysString);
+    console.log(
+      formatDate(
+        Date() + this.app.infos['timepoint'] * 60 * 60 * 1000,
+        'shortTime',
+        'En-en'
+      )
+    );
   }
 }

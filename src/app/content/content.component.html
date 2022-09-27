@@ -1,8 +1,7 @@
 <div class="content" id="w">
   <h2>Your weather</h2>
   <p>Temp: {{ currentTemp }}</p>
-  <p>Feels like: {{ currentFeelsLike }}</p>
+  <p>Pressure: {{ pressure }} hpa</p>
   <p>Hum: {{ currentHum }}</p>
   <app-hourly-weather></app-hourly-weather>
-  <button type="button" (click)="filter()">Days with temp > 25</button>
 </div>
